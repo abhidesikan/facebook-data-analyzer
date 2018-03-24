@@ -18,6 +18,7 @@ def analyze_contact_info(soup):
             for ele in column.find_all('span'):
                 for li in ele.find_all('li'):
                     for child in li.children:
+                        total_contact_count += 1
                         if(child.find("+") != -1):
                             phone_contact_count += 1
                         else:
